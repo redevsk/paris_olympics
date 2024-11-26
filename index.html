@@ -3,52 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <title>Paris Olympics 2024</title>
     <style>
-        body{
-            margin: 0%;
-            padding: 0%;
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
         }
 
-        .header{
+        .header {
             height: 60px;
             width: 100%;
             background-color: blueviolet;
-            margin-left: 0%;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
         }
 
-        .header_text{
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 40px;
-            padding: .5%;
-            margin-left: 50px;
-
+        .header_text {
+            font-size: 24px;
+            color: white;
+            font-weight: bold;
         }
-        
+
         .heading {
-            display: flex;  
-            justify-content: flex-end;
-            position: absolute;
-            width: 100%;
-            top: 50%;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 80px;
-        }      
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 60px); /* Full height minus header */
+            background-color: lavender;
+            text-align: center;
+        }
+
+        .heading_text {
+            font-size: 50px;
+            color: blueviolet;
+            font-weight: bold;
+            animation: slideLeft 10s linear infinite;
+        }
+
+        /* Keyframe animation for sliding text */
+        @keyframes slideLeft {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* Responsive font sizing */
+        @media (max-width: 768px) {
+            .header_text {
+                font-size: 20px;
+            }
+            .heading_text {
+                font-size: 30px;
+            }
+        }
     </style>
-</style>
+</head>
 <body>
     <div class="header">
         <div class="header_text">Olympics 2024</div>
     </div>
     <div class="heading">
-        <marquee direction="left" scrollamount="30">
-            <center>
-            <div class="heading_text">Welcome to the  <br>Paris Olympics 2024</div>
-            </center>
-        </marquee>
+        <div class="heading_text">Welcome to the Paris Olympics 2024</div>
     </div>
-
-    
 </body>
 </html>
